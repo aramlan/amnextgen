@@ -1,225 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AM Next Gen | Websites and social media for brands that want to be seen</title>
-<meta name="description" content="Freelance web developer and digital lead in Kuala Lumpur. 18 years of experience building websites, social campaigns and award-winning AI microsites.">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<!-- Security: this page uses no JavaScript, so scripts are blocked entirely.
-     Only Google Forms may be framed. GitHub Pages cannot send custom headers, so CSP is set here. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data:; frame-src https://docs.google.com; form-action 'none'; base-uri 'none'">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Crect width='100' height='50' fill='%23111'/%3E%3Cpath fill='%23f5c518' d='M50 4C46 10 44 10 40 8 34 6 26 8 18 14 12 18 6 24 2 32c8-4 14-4 20 0 4-4 10-4 14 0 4 6 8 10 14 16 6-6 10-10 14-16 4-4 10-4 14 0 6-4 12-4 20 0-4-8-10-14-16-18C74 8 66 6 60 8c-4 2-6 2-10-4z'/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AM Next Gen — Websites for Malaysian businesses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400..700&family=Instrument+Serif:ital@1&display=swap">
 <style>
-:root{
-  --ink:#07080b; --steel:#141923; --line:#2a303c; --smoke:#aab2c0; --paper:#eef1f6; --signal:#f5c518;
-  --display:"Bebas Neue","Oswald","Impact","Haettenschweiler","Arial Narrow Bold",sans-serif;
-  --body:"Inter","Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
-  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
-}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:4rem}
-body{background:radial-gradient(ellipse 80% 50% at 10% 0,#1a2030 0,transparent 60%),radial-gradient(ellipse 60% 40% at 100% 60%,#1d1a0c 0,transparent 60%),var(--ink);background-attachment:fixed;color:var(--paper);font:1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::after{content:"";position:fixed;inset:0;z-index:50;pointer-events:none;background:var(--noise);opacity:.07;mix-blend-mode:overlay}
-a{color:var(--signal)}
-a:focus-visible,summary:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
-.wrap{width:min(68rem,100% - 2.5rem);margin-inline:auto;position:relative}
-h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.02em;line-height:1}
-h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:1.5rem;background:linear-gradient(180deg,#fff 30%,#8c96a8);-webkit-background-clip:text;background-clip:text;color:transparent;width:fit-content}
-h2::after{content:"";display:block;height:4px;width:60%;margin-top:.5rem;background:linear-gradient(90deg,var(--signal),transparent);box-shadow:0 0 14px var(--signal)}
-p{max-width:62ch}
-
-header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,rgba(20,25,35,.9),rgba(7,8,11,.85));border-bottom:1px solid transparent;border-image:linear-gradient(90deg,transparent,var(--signal),transparent) 1;backdrop-filter:blur(10px) saturate(1.4)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:3.5rem}
-.brand{display:flex;align-items:center;gap:.6rem;font:1.5rem var(--display);letter-spacing:.06em;color:var(--paper);text-decoration:none}
-.brand svg{width:2.4rem;fill:var(--signal);filter:drop-shadow(0 0 6px rgba(245,197,24,.8))}
-nav{display:flex;gap:1.4rem;font-size:.95rem;align-items:center}
-nav a{color:var(--smoke);text-decoration:none;transition:color .2s,text-shadow .2s}
-nav a:hover{color:var(--signal);text-shadow:0 0 12px var(--signal)}
-@media(max-width:34rem){nav a:not(.cta-s){display:none}}
-nav .cta-s{color:var(--ink);background:linear-gradient(180deg,#ffd93d,#d9a900);padding:.4rem 1rem;font-weight:700;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
-nav .cta-s:hover{color:var(--ink);text-shadow:none;filter:brightness(1.15)}
-
-.hero{position:relative;overflow:hidden;padding:clamp(4rem,12vw,9rem) 0 0;isolation:isolate;background:linear-gradient(180deg,#0c1018 0,transparent 80%)}
-.beam{position:absolute;z-index:-3;left:50%;top:-6%;width:min(70rem,160%);aspect-ratio:1;transform:translateX(-18%);
-  background:radial-gradient(ellipse 28% 20% at 68% 34%,rgba(255,226,102,1) 0,rgba(245,197,24,.6) 50%,rgba(245,197,24,0) 100%),
-             conic-gradient(from 195deg at 68% 34%,transparent 0 8deg,rgba(245,197,24,.22) 30deg,rgba(245,197,24,.05) 60deg,transparent 80deg);
-  filter:blur(1px)}
-.beam svg{position:absolute;left:68%;top:34%;width:13%;transform:translate(-50%,-50%);fill:var(--ink);filter:drop-shadow(0 0 10px rgba(7,8,11,.8))}
-.rain{position:absolute;inset:-20% 0 0;z-index:-2;pointer-events:none;opacity:.8;
-  background:repeating-linear-gradient(103deg,transparent 0 22px,rgba(170,190,225,.10) 22px 23px),
-             repeating-linear-gradient(103deg,transparent 0 41px,rgba(170,190,225,.07) 41px 42px),
-             repeating-linear-gradient(103deg,transparent 0 13px,rgba(170,190,225,.05) 13px 14px);
-  background-size:200px 200px,310px 310px,130px 130px;
-  -webkit-mask-image:linear-gradient(180deg,#000 40%,transparent);mask-image:linear-gradient(180deg,#000 40%,transparent)}
-.flash{position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 30% 0,rgba(210,225,255,.35),transparent 60%);opacity:0;pointer-events:none}
-.hero h1{font-size:clamp(3.4rem,11vw,8.5rem);max-width:11ch;background:linear-gradient(180deg,#fff 20%,#9aa5b8 90%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 0 #000) drop-shadow(0 0 28px rgba(245,197,24,.25))}
-.hero h1 span{background:linear-gradient(180deg,#fff2a8,var(--signal) 50%,#c79300);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.lead{margin:1.6rem 0 2rem;font-size:1.2rem;color:#d3d9e4;text-shadow:0 1px 10px var(--ink)}
-.btns{display:flex;flex-wrap:wrap;gap:1rem}
-.btn{position:relative;overflow:hidden;display:inline-block;padding:.9rem 1.8rem;font-weight:700;text-decoration:none;clip-path:polygon(14px 0,100% 0,calc(100% - 14px) 100%,0 100%);transition:filter .2s,transform .2s}
-.btn.primary{background:linear-gradient(180deg,#ffd93d,#d9a900);color:var(--ink)}
-.btn.ghost{color:var(--signal);background:linear-gradient(180deg,rgba(245,197,24,.18),rgba(245,197,24,.04));box-shadow:inset 0 0 0 2px var(--signal)}
-.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.7) 50%,transparent 65%);transform:translateX(-120%);transition:transform .6s}
-.btn:hover{filter:brightness(1.12);transform:translateY(-2px)}
-.btn:hover::after{transform:translateX(120%)}
-.skyline{position:relative;display:block;width:100%;margin-top:3rem;fill:#10151e}
-.skyline.back{height:clamp(5rem,12vw,9rem);fill:#1a2130;margin-bottom:calc(-1 * clamp(3rem,9vw,7rem));transform:scaleX(-1);filter:blur(1px)}
-.skyline.front{height:clamp(5rem,14vw,10rem);margin-top:0;fill:#06070a;filter:drop-shadow(0 -8px 22px rgba(245,197,24,.22))}
-.fog{position:absolute;left:0;right:0;bottom:0;height:35%;background:linear-gradient(0deg,rgba(20,25,35,.9),transparent);pointer-events:none}
-
-section{padding:clamp(3.5rem,8vw,6rem) 0;position:relative}
-.alt{background:linear-gradient(160deg,#171d2a,#0e121a 60%,#14120a);clip-path:polygon(0 2.5rem,100% 0,100% calc(100% - 2.5rem),0 100%);margin-block:-1.25rem;padding-block:calc(clamp(3.5rem,8vw,6rem) + 2.5rem)}
-.grid{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(15.5rem,1fr));perspective:900px}
-.card{position:relative;padding:1.5rem 1.6rem;border-radius:2px;background:linear-gradient(145deg,rgba(32,40,56,.85),rgba(14,18,26,.9));box-shadow:inset 0 1px 0 rgba(255,255,255,.08),inset 4px 0 0 var(--signal),0 18px 40px -18px #000;transition:transform .35s,box-shadow .35s}
-.card::before{content:"";position:absolute;top:0;right:0;width:2.2rem;height:2.2rem;background:linear-gradient(225deg,var(--ink) 50%,transparent 50%);border-bottom-left-radius:2px;box-shadow:-1px 1px 0 rgba(245,197,24,.4)}
-.card:hover{transform:translateY(-8px) rotateX(4deg);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 4px 0 0 var(--signal),0 0 0 1px rgba(245,197,24,.35),0 24px 50px -14px rgba(245,197,24,.28)}
-.card h3{font-size:1.9rem;margin-bottom:.5rem}
-.card p{color:var(--smoke);font-size:1rem}
-.stats{display:flex;flex-wrap:wrap;gap:2.5rem 4rem;margin-bottom:2.5rem}
-.stats b{display:block;font:4rem/1 var(--display);background:linear-gradient(180deg,#fff2a8,var(--signal) 60%,#b88700);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 14px rgba(245,197,24,.5))}
-.stats span{color:var(--smoke);font-size:.95rem}
-.proof{max-width:44rem;border-left:4px solid var(--signal);padding:1rem 1.4rem;font-size:1.1rem;background:linear-gradient(90deg,rgba(245,197,24,.12),transparent)}
-.proof small{display:block;margin-top:.6rem;color:var(--smoke);font-size:.95rem}
-.work a.card{display:block;text-decoration:none;color:inherit}
-.work a.card:hover h3{color:var(--signal);text-shadow:0 0 14px rgba(245,197,24,.6)}
-.work .url{color:var(--signal);font-size:.9rem;word-break:break-all}
-.steps{list-style:none;padding:0;display:grid;gap:1.4rem;max-width:44rem;counter-reset:s}
-.steps li{counter-increment:s;padding-left:4rem;position:relative}
-.steps li::before{content:counter(s);position:absolute;left:0;top:-.2rem;width:2.8rem;height:2.8rem;display:grid;place-items:center;font:1.9rem/1 var(--display);color:var(--ink);background:linear-gradient(180deg,#ffd93d,#d9a900);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);filter:drop-shadow(0 0 8px var(--signal))}
-.steps li:not(:last-child)::after{content:"";position:absolute;left:1.4rem;top:2.8rem;bottom:-1.2rem;width:2px;background:linear-gradient(var(--signal),transparent)}
-.steps b{display:block}
-.steps span{color:var(--smoke)}
-
-.formbox{background:#fff;border-top:6px solid var(--signal);margin-top:1.5rem;box-shadow:0 0 0 1px rgba(245,197,24,.4),0 0 60px -10px rgba(245,197,24,.45),0 30px 60px -20px #000}
-.formbox iframe{display:block;width:100%;height:46rem;border:0}
-.note{margin-top:1rem;color:var(--smoke);font-size:.95rem}
-footer{border-top:1px solid transparent;border-image:linear-gradient(90deg,transparent,var(--signal),transparent) 1;padding:2rem 0;color:var(--smoke);font-size:.9rem;background:#05060a}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem}
-
-@media(prefers-reduced-motion:no-preference){
-  .beam{animation:flick 6s ease-out 1 both,pulse 5s ease-in-out 6s infinite}
-  @keyframes flick{0%{opacity:0}8%{opacity:.9}12%{opacity:.2}18%,100%{opacity:1}}
-  @keyframes pulse{50%{opacity:.82}}
-  .rain{animation:fall .9s linear infinite}
-  @keyframes fall{to{background-position:-40px 200px,-60px 310px,-20px 130px}}
-  .flash{animation:bolt 11s 4s infinite}
-  @keyframes bolt{0%,100%{opacity:0}1%{opacity:1}2%{opacity:.1}3%{opacity:.8}6%{opacity:0}}
-}
-@supports (animation-timeline:scroll()){
-  @media(prefers-reduced-motion:no-preference){
-    .beam{animation:flick 6s ease-out 1 both,drift linear both;animation-timeline:auto,scroll(root);animation-range:normal,0 90vh}
-    .skyline.back{animation:rise linear both;animation-timeline:scroll(root);animation-range:0 90vh}
-    @keyframes drift{to{translate:-4rem -5rem}}
-    @keyframes rise{to{translate:0 -2.5rem}}
-  }
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:root{--bg:#fff;--fg:#111;--mut:#404040;--mut2:#525252;--line:#E5E7EB;--blue:#1D4ED8;--yel:#FFD60A;--tint:#EFF6FF;--card:#fff;--dark:#111;--darkfg:#fff;--inv:#fff;--soft:#FFF8CC;--btnfg:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B0B0C;--fg:#F5F5F5;--mut:#C7C7C7;--mut2:#A3A3A3;--line:#2A2A2E;--blue:#6C9BFF;--tint:#161B2B;--card:#141416;--dark:#1C1C1F;--soft:#2A2608;--btnfg:#0B0B0C}}
+:root[data-theme="dark"]{--bg:#0B0B0C;--fg:#F5F5F5;--mut:#C7C7C7;--mut2:#A3A3A3;--line:#2A2A2E;--blue:#6C9BFF;--tint:#161B2B;--card:#141416;--dark:#1C1C1F;--soft:#2A2608;--btnfg:#0B0B0C}
+*{box-sizing:border-box}html{scroll-padding-top:90px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:'DM Sans',system-ui,sans-serif;line-height:1.5}
+a{text-decoration:none;color:inherit}
+.w{max-width:1200px;margin:0 auto;padding:0 24px}
+.d{font-family:'Bricolage Grotesque',system-ui,sans-serif}
+.s{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;color:var(--blue)}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .w{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 16px;padding-top:14px;padding-bottom:14px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px}
+.logo i{font-style:normal;width:40px;height:40px;border-radius:12px;background:#111;color:var(--yel);display:flex;align-items:center;justify-content:center;font-size:17px}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;font-size:15px;font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:12px 22px;border-radius:14px;font-weight:700;background:var(--blue);color:var(--btnfg)}
+header .btn{border-radius:999px;padding:10px 18px}
+.btn.o{background:transparent;color:var(--fg);border:2px solid var(--fg)}
+.hero{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding:72px 24px 56px}
+.hero>div{flex:1 1 420px;min-width:0}
+.pill{display:inline-block;background:var(--yel);color:#111;font-weight:700;font-size:14px;padding:8px 14px;border-radius:999px}
+h1{margin:20px 0;font-size:clamp(42px,7vw,72px);line-height:1.02;font-weight:800;letter-spacing:-2px}
+h1 .s{font-size:1.17em;letter-spacing:0;background:linear-gradient(transparent 64%,var(--yel) 64%);padding:0 6px;color:var(--blue)}
+.lead{font-size:clamp(21px,3vw,28px);line-height:1.25;font-weight:700;max-width:560px;margin:0 0 16px}
+.p{font-size:19px;color:var(--mut);max-width:560px;margin:0 0 14px}
+.bm{font-size:22px;margin:0 0 22px}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.ticks{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;font-weight:600;color:var(--mut);margin-top:22px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{border-radius:22px;padding:26px 22px;min-height:150px;display:flex;flex-direction:column;justify-content:flex-end}
+.stat b{font-size:44px;line-height:1;font-weight:800;letter-spacing:-1px}
+.stat span{font-weight:600;margin-top:8px;font-size:15px}
+.st1{grid-column:span 2;background:#111;color:var(--yel)}
+.st2{background:#DBEAFE;color:#1E3A8A}
+.st3{background:#FFF3B0;color:#111}
+.trust{background:var(--dark);color:#fff}
+.trust .w{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;padding-top:26px;padding-bottom:26px}
+.trust .y{color:var(--yel);font-weight:600;font-size:15px}
+.trust .b{display:flex;flex-wrap:wrap;gap:12px 28px;font-weight:700;font-size:17px}
+section{padding:72px 0 0}
+.eb{font-weight:700;color:var(--blue);font-size:15px;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+h2{margin:0 0 12px;font-size:clamp(32px,5vw,44px);line-height:1.1;font-weight:800;letter-spacing:-1px}
+h2 .s{font-size:1.12em}
+.sub{font-size:18px;color:var(--mut);max-width:720px;margin:0 0 36px}
+.g{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.card .k{font-size:14px;font-weight:700;color:var(--mut2)}
+.card h3{margin:0;font-size:24px;font-weight:800}
+.card .pr{font-size:15px;color:var(--mut2)}.card .pr b{font-size:38px;letter-spacing:-1px;color:var(--fg)}
+.card .ds{font-size:15px;color:var(--mut)}
+.card .ex{font-size:14px;font-weight:600;color:var(--mut);background:var(--tint);border-radius:10px;padding:10px 12px}
+.card .btn{margin-top:auto;background:var(--fg);color:var(--bg);width:100%}
+.pop{border:3px solid var(--blue)}
+.pop .btn{background:var(--blue)}
+.tag{background:var(--blue);color:var(--btnfg);font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.ai{background:#111;color:#fff;border-color:#111}
+.ai .k{color:var(--yel)}.ai .pr{color:var(--yel)}.ai .pr b{color:#fff}.ai .ds{color:#E5E5E5}.ai .ex{background:#262626;color:#fff}
+.ai .btn{background:var(--yel);color:#111}
+.fix{border:2px dashed var(--blue)}
+.fix .ex{background:var(--soft)}.fix .btn{background:var(--blue)}
+.inc{margin-top:28px;background:var(--yel);color:#111;border-radius:24px;padding:32px}
+.inc h3{margin:0 0 18px;font-size:24px;font-weight:800}
+.inc div{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 24px;font-weight:600}
+.proj{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--card)}
+.proj .bar{height:10px}
+.proj .in{padding:24px;display:flex;flex-direction:column;gap:8px}
+.proj .t{font-size:13px;font-weight:700;color:var(--blue)}
+.proj h3{margin:0;font-size:22px;font-weight:700}
+.proj p{margin:0;font-size:15px;color:var(--mut)}
+.num{width:48px;height:48px;border-radius:14px;background:var(--blue);color:var(--btnfg);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px}
+.step{display:flex;flex-direction:column;gap:10px}
+.step h3{margin:0;font-size:21px;font-weight:700}.step p{margin:0;font-size:15px;color:var(--mut)}
+.pr-sec{margin-top:72px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:72px 0}
+.faq{max-width:900px}
+.q{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 24px;margin-bottom:12px}
+.q b{font-size:19px;font-family:'Bricolage Grotesque',sans-serif}
+.q p{margin:6px 0 0;font-size:15px;color:var(--mut)}
+.cta{margin:72px 0;background:var(--blue);color:#fff;border-radius:28px;padding:48px 36px;color:var(--btnfg);display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+.cta h2{margin:0 0 8px;font-size:clamp(30px,4.5vw,40px)}
+.cta h2 .s{color:var(--yel)}
+.cta p{margin:0;font-size:18px;opacity:.9}
+.cta .btn{background:var(--yel);color:#111;font-size:18px;padding:18px 30px}
+footer{border-top:1px solid var(--line)}
+footer .w{display:flex;flex-wrap:wrap;gap:12px 16px;justify-content:space-between;padding-top:26px;padding-bottom:26px;font-size:14px;color:var(--mut2)}
 </style>
 </head>
 <body>
+<header><div class="w">
+<div class="logo d"><i>AM</i>AM Next Gen</div>
+<nav><a href="#pricing">Pricing</a><a href="#work">Work</a><a href="#process">How it works</a><a href="#faq">FAQ</a>
+<a class="btn" href="https://wa.me/60XXXXXXXXX">WhatsApp me</a></nav>
+</div></header>
 
-<header>
-  <div class="wrap">
-    <a class="brand" href="#top" aria-label="AM Next Gen, home">
-      <svg viewBox="0 0 100 50" aria-hidden="true"><path id="bat" d="M50 4C46 10 44 10 40 8 34 6 26 8 18 14 12 18 6 24 2 32c8-4 14-4 20 0 4-4 10-4 14 0 4 6 8 10 14 16 6-6 10-10 14-16 4-4 10-4 14 0 6-4 12-4 20 0-4-8-10-14-16-18C74 8 66 6 60 8c-4 2-6 2-10-4z"/></svg>
-      AM NEXT GEN
-    </a>
-    <nav aria-label="Main">
-      <a href="#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="#process">Process</a>
-      <a class="cta-s" href="#contact">Start a project</a>
-    </nav>
-  </div>
-</header>
+<div class="w hero">
+<div>
+<span class="pill">Freelance web developer · Kuala Lumpur · 18 years in digital</span>
+<h1 class="d">Your brand needs a <span class="s">signal.</span></h1>
+<p class="lead d">Websites that bring customers in. Live in 2 weeks, from RM1,800.</p>
+<p class="p">Fast, secure websites for kedai, salons, clinics, cafés and growing Malaysian brands. Fixed prices, WhatsApp built in, and you can update it yourself.</p>
+<p class="bm s" style="color:var(--fg)">Laman web untuk perniagaan anda — harga tetap, siap cepat.</p>
+<div class="row"><a class="btn" href="https://wa.me/60XXXXXXXXX">Jom borak on WhatsApp</a><a class="btn o" href="#pricing">See prices</a></div>
+<div class="ticks"><span>✓ Websites from RM1,800</span><span>✓ Free homepage mockup first</span><span>✓ Repairs: pay after the fix</span></div>
+</div>
+<div class="stats d">
+<div class="stat st1"><b>18 years</b><span>in digital, from big-brand campaigns to local kedai</span></div>
+<div class="stat st2"><b>2 weeks</b><span>to launch a business site</span></div>
+<div class="stat st3"><b>30 days</b><span>free support after launch</span></div>
+</div>
+</div>
 
-<main id="top">
-  <div class="hero">
-    <div class="beam" aria-hidden="true"><svg viewBox="0 0 100 50"><use href="#bat"/></svg></div>
-    <div class="rain" aria-hidden="true"></div><div class="flash" aria-hidden="true"></div>
-    <div class="wrap">
-      <h1>Your brand needs a <span>signal</span></h1>
-      <p class="lead">I build fast, secure websites and social media campaigns for Malaysian businesses that want to be noticed. Eighteen years in agencies and eCommerce, now taking on a few clients directly.</p>
-      <div class="btns">
-        <a class="btn primary" href="#contact">Tell me about your project</a>
-        <a class="btn ghost" href="#work">See recent work</a>
-      </div>
-    </div>
-    <svg class="skyline back" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V70h40V50h30v20h30V30h24V10h14v20h22v60h40V55h36V40h20V80h44V60h30V20h10V0h8v20h10v40h40V75h50V45h34V25h26v35h30V80h60V55h30V35h22V60h50V85h50V50h24V30h30v40h40V65h46V40h20V15h10V0h8v15h10v25h28v45h50V70h40V50h30v30h44V60h40V90h60V70h50v50z"/></svg>
-    <svg class="skyline front" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V70h40V50h30v20h30V30h24V10h14v20h22v60h40V55h36V40h20V80h44V60h30V20h10V0h8v20h10v40h40V75h50V45h34V25h26v35h30V80h60V55h30V35h22V60h50V85h50V50h24V30h30v40h40V65h46V40h20V15h10V0h8v15h10v25h28v45h50V70h40V50h30v30h44V60h40V90h60V70h50v50z"/></svg>
-    <div class="fog" aria-hidden="true"></div>
-  </div>
+<div class="trust"><div class="w">
+<div class="y">Same developer behind campaigns for big brands:</div>
+<div class="b"><span>Petronas</span><span>Maybank</span><span>BMW</span><span>Ford</span><span>American Express</span></div>
+<div class="y" style="font-size:14px">Kancil &amp; Appies award winner</div>
+</div></div>
 
-  <section id="services">
-    <div class="wrap">
-      <h2>What I can take off your plate</h2>
-      <div class="grid">
-        <div class="card"><h3>Websites that sell</h3><p>Business sites, landing pages and online stores built on WordPress, Magento or custom code. Quick to load, easy to update, and secured from the start.</p></div>
-        <div class="card"><h3>Social media that works</h3><p>Channel audits, campaign strategy and content plans, tied to a goal you can measure instead of likes alone.</p></div>
-        <div class="card"><h3>AI-powered campaigns</h3><p>Microsites and interactive experiences that give each visitor something personal, like the AI video generator I built for a RM 1 million scholarship programme.</p></div>
-        <div class="card"><h3>Fixes and upkeep</h3><p>Hacked, slow or broken site? I clean it up, lock it down and keep it running.</p></div>
-      </div>
-    </div>
-  </section>
+<section id="pricing"><div class="w">
+<div class="eb">Pricing · Harga</div>
+<h2 class="d">Pick what <span class="s">fits</span> your business</h2>
+<p class="sub">Fixed starting prices, no hidden charges. Not sure which one? WhatsApp me and I'll recommend one in a day.</p>
+<div class="g g3">
+<div class="card"><div class="k">For promos, launches &amp; ads</div><h3 class="d">Landing Page</h3><div class="pr">from <b class="d">RM1,800</b></div><div class="ds">One page · enquiry form · WhatsApp · ready in 5–7 days</div><div class="ex">Example: product or event launch page</div><a class="btn" href="https://wa.me/60XXXXXXXXX">Ask about this</a></div>
+<div class="card pop"><div class="top"><div class="k">For shops, clinics &amp; services</div><span class="tag">Most popular</span></div><h3 class="d">Business Website</h3><div class="pr">from <b class="d">RM2,800</b></div><div class="ds">Up to 6 pages · Google Maps · basic SEO · you edit it yourself · ready in 2 weeks</div><div class="ex">Example: HairTric &amp; Lashility</div><a class="btn" href="https://wa.me/60XXXXXXXXX">Ask about this</a></div>
+<div class="card"><div class="k">For salons, homestays &amp; classes</div><h3 class="d">Booking Website</h3><div class="pr">from <b class="d">RM4,000</b></div><div class="ds">Booking calendar · WhatsApp or email confirmations · deposits optional</div><div class="ex">Example: appointment booking for a beauty studio</div><a class="btn" href="https://wa.me/60XXXXXXXXX">Ask about this</a></div>
+<div class="card"><div class="k">For selling online</div><h3 class="d">Online Store</h3><div class="pr">from <b class="d">RM6,000</b></div><div class="ds">Up to 50 products · FPX &amp; card payments · shipping setup · order alerts</div><div class="ex">Example: WooCommerce shop for a local brand</div><a class="btn" href="https://wa.me/60XXXXXXXXX">Ask about this</a></div>
+<div class="card ai"><div class="k">For brands &amp; big launches</div><h3 class="d">AI Campaign Microsite</h3><div class="pr">from <b class="d">RM10,000</b></div><div class="ds">Interactive, shareable experiences powered by AI, built to get people talking</div><div class="ex">Example: award-winning AI video generator for a scholarship programme</div><a class="btn" href="https://wa.me/60XXXXXXXXX">Ask about this</a></div>
+<div class="card fix"><div class="k">Hacked, slow or broken site?</div><h3 class="d">Fix &amp; Rescue</h3><div class="pr">from <b class="d">RM200</b></div><div class="ds">Malware cleanup · speed fixes · broken plugins · migrations. <strong>Pay only after it's fixed.</strong></div><div class="ex">Monthly care plans also available</div><a class="btn" href="https://wa.me/60XXXXXXXXX">Fix my site</a></div>
+</div>
+<div class="inc"><h3 class="d">Included in every package</h3>
+<div><span>✓ Looks great on phones</span><span>✓ WhatsApp button</span><span>✓ Domain, hosting &amp; SSL setup</span><span>✓ Fast loading</span><span>✓ Basic Google SEO</span><span>✓ Training so you can edit it</span><span>✓ 30 days free support</span><span>✓ English &amp; BM ready</span></div></div>
+</div></section>
 
-  <section class="alt" id="proof">
-    <div class="wrap">
-      <div class="stats">
-        <div><b>18</b><span>years in digital</span></div>
-        <div><b>10+</b><span>years hands-on development</span></div>
-        <div><b>CSM</b><span>Certified ScrumMaster, 2026</span></div>
-      </div>
-      <blockquote class="proof">
-        I led the SAFI Serlah Seri Diri AI generator at IPG Mediabrands for Biasiswa Siswi SAFI. It won multiple awards, including the Appies and the Kancil Awards.
-        <small>Past clients through agency work include Petronas, Maybank, American Express, Johnson &amp; Johnson, BMW and Ford.</small>
-      </blockquote>
-    </div>
-  </section>
+<section id="work"><div class="w">
+<div class="eb">Recent work · Projek</div>
+<h2 class="d">Real businesses, <span class="s">real sites</span></h2>
+<p class="sub" style="margin-bottom:28px"></p>
+<div class="g g4" style="margin-top:-28px">
+<div class="proj"><div class="bar" style="background:#111"></div><div class="in"><div class="t">BEAUTY · 2022</div><h3 class="d">HairTric &amp; Lashility</h3><p>[One line: what was built and the result for the client]</p></div></div>
+<div class="proj"><div class="bar" style="background:#93C5FD"></div><div class="in"><div class="t">[INDUSTRY] · 2021</div><h3 class="d">Takeo</h3><p>[One line: what was built and the result for the client]</p></div></div>
+<div class="proj"><div class="bar" style="background:var(--yel)"></div><div class="in"><div class="t">[INDUSTRY] · 2020</div><h3 class="d">EcoParadise</h3><p>[One line: what was built and the result for the client]</p></div></div>
+<div class="proj"><div class="bar" style="background:#262626"></div><div class="in"><div class="t">AI CAMPAIGN · AWARD WINNER</div><h3 class="d">AI Video Generator</h3><p>Scholarship programme microsite. Won at the Kancil and Appies awards.</p></div></div>
+</div>
+</div></section>
 
-  <section class="work" id="work">
-    <div class="wrap">
-      <h2>Recent independent projects</h2>
-      <div class="grid">
-        <a class="card" href="https://hairtricandlashility.com" target="_blank" rel="noopener noreferrer"><h3>HairTric &amp; Lashility</h3><p>Beauty brand website, 2022.</p><span class="url">hairtricandlashility.com</span></a>
-        <a class="card" href="https://takeo.com.my" target="_blank" rel="noopener noreferrer"><h3>Takeo Fine Paper</h3><p>Product and brand website, 2021.</p><span class="url">takeo.com.my</span></a>
-        <a class="card" href="https://ecoparadise.my" target="_blank" rel="noopener noreferrer"><h3>EcoParadise</h3><p>Brand website, 2020.</p><span class="url">ecoparadise.my</span></a>
-      </div>
-    </div>
-  </section>
+<div class="pr-sec" id="process"><div class="w">
+<h2 class="d" style="margin-bottom:32px">How it works — <span class="s">simple, no drama</span></h2>
+<div class="g g4">
+<div class="step"><div class="num d">1</div><h3 class="d">WhatsApp me</h3><p>Tell me about your business. I reply personally within 1 working day.</p></div>
+<div class="step"><div class="num d">2</div><h3 class="d">Free mockup + quote</h3><p>See your homepage before you pay anything, with a fixed price in writing.</p></div>
+<div class="step"><div class="num d">3</div><h3 class="d">I build, you review</h3><p>Weekly check-ins, with your feedback built in as we go.</p></div>
+<div class="step"><div class="num d">4</div><h3 class="d">Launch &amp; care</h3><p>Go live, get trained, and get 30 days of free support. I don't disappear after payment.</p></div>
+</div></div></div>
 
-  <section class="alt" id="process">
-    <div class="wrap">
-      <h2>How we work together</h2>
-      <ol class="steps">
-        <li><b>You send the brief</b><span>Fill in the short form below. I reply within two working days.</span></li>
-        <li><b>We agree scope and price</b><span>A clear proposal with timeline and cost before any work starts.</span></li>
-        <li><b>I build, you review</b><span>Regular check-ins in short sprints, so nothing surprises you at the end.</span></li>
-        <li><b>Launch and support</b><span>I deploy, test and stay on hand after go-live.</span></li>
-      </ol>
-    </div>
-  </section>
+<section id="faq"><div class="w faq">
+<h2 class="d" style="margin-bottom:24px">Common <span class="s">questions</span></h2>
+<div class="q"><b>How much do I pay upfront?</b><p>[e.g. 50% deposit after you approve the mockup, 50% at launch]</p></div>
+<div class="q"><b>Can I update the website myself?</b><p>Yes. You get a training session so you can change text, photos and prices on your own.</p></div>
+<div class="q"><b>I don't have photos or copy yet. Is that OK?</b><p>[Answer: e.g. copywriting help and stock photos available as add-ons]</p></div>
+<div class="q"><b>What happens after the 30 days?</b><p>[Monthly care plan from RM___ covering updates, backups and security]</p></div>
+</div></section>
 
-  <section id="contact">
-    <div class="wrap">
-      <h2>Start a project</h2>
-      <p>Tell me what you need and your rough budget and timeline. I'll get back to you personally.</p>
-      <div class="formbox"> 
-        <iframe title="Project enquiry form" loading="lazy"
-          src="https://docs.google.com/forms/d/e/1FAIpQLScxUPQMjXxx56T2d_9Nt5e1Bl1barASXCDIQT7KHxN38unFvQ/viewform?embedded=true"
-          sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-          referrerpolicy="strict-origin-when-cross-origin">Loading form…</iframe>
-      </div>
-      <p class="note">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLScxUPQMjXxx56T2d_9Nt5e1Bl1barASXCDIQT7KHxN38unFvQ/viewform" target="_blank" rel="noopener noreferrer">Open it in a new tab</a>.</p>
-    </div>
-  </section>
-</main>
+<div class="w"><div class="cta">
+<div><h2 class="d">Ready to send your <span class="s">signal?</span></h2><p>Tell me about your project. Jom borak: free mockup, fixed price, no obligation.</p></div>
+<a class="btn" href="https://wa.me/60XXXXXXXXX">WhatsApp me now</a>
+</div></div>
 
-<footer>
-  <div class="wrap">
-    <span>&copy; 2026 AM Next Gen. Kuala Lumpur, Malaysia.</span>
-    <span>English and Bahasa Malaysia</span>
-  </div>
-</footer>
+<footer><div class="w"><span>© 2026 AM Next Gen · Kuala Lumpur</span><span>Certified ScrumMaster · 18 years in digital · English &amp; Bahasa Malaysia</span></div></footer>
 </body>
 </html>
